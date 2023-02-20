@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- pt sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- /pt sans -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /font awesome -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>htmlcss-responsive-layout</title>
+</head>
+
+<body>
+    <header>
+        <nav class ="wrapper">
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+
+            <!-- Menù visibile sopra 768px -->
+            <ul class="capitalize a-color-white">
+                <li><a href="#planning">planning</a></li>
+                <li><a href="#testimonials">testimonials</a></li>
+                <li><a href="#features">features</a></li>
+                <li><a href="#about">about us</a></li>
+                <li><a href="#start" class="white-button">get started</a></li>
+            </ul>
+
+            <div class="capitalize a-color-white">
+                <i class="fa-solid fa-bars"></i>
+
+                <!-- Menù a tendina hover sotto 768px-->
+                <div class="menu">
+                    <a href="#planning">planning</a>
+                    <a href="#testimonials">testimonials</a>
+                    <a href="#features">features</a>
+                    <a href="#about">about us</a>
+                    <a href="#start">get started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="planning" class="wrapper">
+            
+            <div>
+                <div class="card">
+                    <div>
+                        <h2>Get a demo application</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, rem fugit. Molestiae culpa cumque consequuntur.</p>
+                        <a href="#" class="blue-button capitalize">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>app store</span>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="./img/phone.png" alt="phone">
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <i class="fa-solid fa-file icon-size"></i>
+                    <h2 class="capitalize">clean code</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatibus fuga ex mollitia, nobis sequi.</p>
+                </div>
+    
+                <div class="card">
+                    <i class="fa-solid fa-compass-drafting icon-size"></i>
+                    <h2 class="capitalize">web design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatibus fuga ex mollitia, nobis sequi.</p>
+                </div>
+    
+                <div class="card">
+                    <i class="fa-sharp fa-solid fa-laptop-code icon-size"></i>
+                    <h2 class="capitalize">development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatibus fuga ex mollitia, nobis sequi.</p>
+                </div>
+    
+                <div class="card">
+                    <i class="fa-solid fa-bullhorn icon-size"></i>
+                    <h2 class="capitalize">branding</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatibus fuga ex mollitia, nobis sequi.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="testimonials" class="wrapper"></section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+:root {
+    --bg_blue: #0084fd;
+    --bg_menu_hover: #3fb1e6;
+    --bg_even_section: #9792e4;
+    --bg_card: #b5ddff;
+    --p_dark_color: #516372;
+    --header_height: 3rem;
+    --icon_size: 5rem;
+}
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.a-color-white a {
+    color: white;
+}
+
+/* /General */
+
+/* Header */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--bg_blue);
+}
+
+nav {
+    height: var(--header_height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    width: 3rem;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+nav > div:last-of-type {
+    width: 4rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+nav i {
+    font-size: 1.4rem;
+    color: white;
+}
+
+nav > div:last-of-type:hover {
+    background-color: var(--bg_menu_hover);
+}
+
+nav div:last-of-type:hover .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul, nav .menu {
+    display: none;
+}
+
+.menu {
+    width: 10rem;
+    height: 11.9rem;
+    position: absolute;
+    bottom: -11.9rem;
+    right: 0rem;
+    justify-content: space-around;
+    
+    background-color: var(--bg_menu_hover);
+}
+
+.menu a {
+    padding: 0.3rem;
+}
+
+.menu a:hover {
+    background-color: var(--bg_blue)
+}
+
+/* /Header */
+
+/* Main */
+
+main {
+    margin-top: calc(var(--header_height) + 3rem);
+}
+
+section:nth-child(even) {
+    background-color: var(--bg_even_section);
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--bg_card);
+    border-radius: 10px;
+    margin-top: 3rem;
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+
+.card div:first-of-type {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card:first-of-type {
+    align-items: flex-start;
+}
+
+.card div:last-of-type img {
+    display: block;
+    width: 100%;
+}
+
+.card h2 {
+    color: var(--bg_blue);
+}
+
+.card p {
+    color: var(--p_dark_color);
+    padding-bottom: 1rem;
+}
+
+.card>i {
+    color: var(--bg_blue);
+}
+
+.blue-button {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 0.8rem;
+    background-color: var(--bg_blue);
+    border-radius: 40px;
+    color: white;
+    padding: 0.5rem 3.5rem;
+}
+
+.blue-button:hover{
+    opacity: 0.75;
+}
+
+.icon-size {
+    font-size: var(--icon_size);
+}
+
+/* /Main */
+
+
+
+/* Responsive */
+
+@media screen and (min-width: 580px) {
+
+    .wrapper {
+        max-width: 900px;
+    }
+
+
+    /* Main */
+    #planning > div {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+
+    #planning .card {
+        width: calc((100% - 2rem) / 3);
+    }
+
+    #planning .card:first-of-type {
+        width: calc(((100% - 1rem) / 3) * 2);
+    }
+
+
+    #planning .card:nth-child(2) {
+        width: calc((100% - 1rem) / 3);
+    }
+
+    #planning .card > div:last-of-type {
+        width: 50%;
+        align-self: center;
+    }
+
+    /* /Main */
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* Header */
+
+    nav > div:last-of-type {
+        display: none;
+    }
+
+    nav > ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav > ul:first-of-type > li:last-child > a{
+        color: black;
+    }
+
+    .white-button{
+        background-color: white;
+        border-radius: 40px;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .white-button:hover{
+        opacity: 0.9;
+    }
+    /* /Header */
+
+
+    /* Main */
+    #planning .card:first-of-type {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    #planning .card:first-of-type>div {
+        width: 50%;
+    }
+
+    /* /Main */
+}
