@@ -22,6 +22,7 @@ body {
     --p_dark_color: #516372;
     --header_height: 3rem;
     --icon_size: 5rem;
+    --little_icon_size: 1.5rem;
 }
 
 .wrapper {
@@ -131,6 +132,8 @@ section:nth-child(even) {
     background-color: var(--bg_even_section);
 }
 
+        /* Demo */
+
 .card {
     display: flex;
     flex-flow: column nowrap;
@@ -142,37 +145,37 @@ section:nth-child(even) {
     padding: 1rem 1.5rem 0 1.5rem;
 }
 
-.card div:first-of-type {
+#demo .card div:first-of-type {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     gap: 1.5rem;
 }
 
-.card:first-of-type {
+#demo.card:first-of-type {
     align-items: flex-start;
 }
 
-.card div:last-of-type{
+#demo .card div:last-of-type{
     width: 50%;
     align-self: center;
 }
 
-.card div:last-of-type img {
+img {
     display: block;
     width: 100%;
 }
 
-.card h2 {
+#demo .card h2 {
     color: var(--bg_blue);
 }
 
-.card p {
+#demo .card p {
     color: var(--p_dark_color);
     padding-bottom: 1rem;
 }
 
-.card>i {
+#demo .card>i {
     color: var(--bg_blue);
 }
 
@@ -195,6 +198,195 @@ section:nth-child(even) {
     font-size: var(--icon_size);
 }
 
+        /* Planning */
+
+#planning{
+    margin-top: 7rem;
+    padding: 5rem 0;
+}
+
+#planning .wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#planning .wrapper > div{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+#planning .card{
+    background-color: white;
+    border-radius: 30px;
+}
+
+.round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg_even_section);
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.little-icon-size{
+    font-size: var(--little_icon_size);
+}
+
+.h1-font-size{
+    font-size: 2.2rem;
+}
+
+.white-color{
+    color: white;
+}
+
+/* Testimonials */
+
+#testimonials{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+#testimonials > h2{
+    color: var(--bg_even_section);
+}
+
+#testimonials .card{
+    background-color: var(--bg_even_section);
+    border-radius: 30px;
+    padding-bottom: 0.5rem;
+    margin-bottom: -4rem;
+    color: white;
+}
+
+#testimonials .card > div:last-of-type{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#testimonials-img{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#testimonials-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.big-text{
+    font-size: 2.1rem;
+}
+
+/* Features */
+#features{
+    margin-top: 12rem;
+}
+
+#features .wrapper{
+    padding: 3rem 0;
+    color: white;
+}
+
+#features .card{
+    align-items: flex-start;
+    background-color: white;
+    color: var(--bg_even_section);
+    padding-bottom: 1.5rem;
+}
+
+.text-align{
+    text-align: center;
+}
+
+#features .violet-button{
+    background-color: var(--bg_even_section);
+    border-radius: 40px;
+    color: white;
+    padding: 0.5rem 2.5rem;
+}
+
+.violet-button:hover{
+    opacity: 0.75;
+}
+
+.medium-text{
+    font-size: 1.3rem;
+}
+
+/* About */
+#about{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    padding: 6rem 0;
+}
+
+#about > div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+#about .relative{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#about-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #0084fd;
+}
+
+#about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about-img i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--bg_even_section);
+}
+
+.giant-text{
+    font-size: 4rem;
+}
+
+#about .violet-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg_even_section);
+    border-radius: 40px;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.text-violet{
+    color: var(--bg_even_section);
+}
 /* /Main */
 
 
@@ -209,30 +401,77 @@ section:nth-child(even) {
 
 
     /* Main */
-    #planning > div {
+    #demo > div {
         display: flex;
         flex-flow: row wrap;
         gap: 1rem;
     }
 
-    #planning .card {
+    #demo .card {
         width: calc((100% - 2rem) / 3);
     }
 
-    #planning .card:first-of-type {
+    #demo .card:first-of-type {
         width: calc(((100% - 1rem) / 3) * 2);
     }
 
 
-    #planning .card:nth-child(2) {
+    #demo .card:nth-child(2) {
         width: calc((100% - 1rem) / 3);
     }
 
+    #planning .white-color{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #planning-img1{
+        align-self: center;
+    }
+
+    #planning-img1, #planning-img2{
+        width: 68%;
+    }
+
+    #testimonials .card{
+        flex-flow: row nowrap;
+    }
+
+    #testimonials .card > div:last-of-type{
+        width: calc(100% - 200px);
+    }
+
+    #features .wrapper > div{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1.5rem;
+    }
+
+    #features .wrapper > div .card{
+        width: calc((100% - (1.5rem * 2)) / 2);
+    }
+
+    #about{
+        flex-flow: row nowrap;
+    }
+
+    #about > div:first-of-type{
+        width: 70%;
+    }
+    
+    #about > div:last-of-type{
+        width: 30%;
+    }
+    
     /* /Main */
 
 }
 
 @media screen and (min-width: 1000px) {
+
+    .wrapper{
+        max-width: 1200px;
+    }
 
     /* Header */
 
@@ -262,14 +501,30 @@ section:nth-child(even) {
 
 
     /* Main */
-    #planning .card:first-of-type {
+    #demo .card:first-of-type {
         display: flex;
         flex-flow: row nowrap;
     }
 
-    #planning .card:first-of-type>div {
+    #demo .card:first-of-type>div {
         width: 50%;
     }
 
+    #planning .wrapper{
+        flex-flow: row nowrap;
+        gap: 2rem;
+    }
+
+    #planning-img1, #planning-img2{
+        width: 55%;
+    }
+
+    #planning .card{
+        transform: translate(0, 10%);
+    }
+
+    #features .wrapper > div .card{
+        width: calc((100% - (1.5rem * 3)) / 3);
+    }
     /* /Main */
 }
