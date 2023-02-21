@@ -19,6 +19,7 @@ body {
     --bg_menu_hover: #3fb1e6;
     --bg_even_section: #9792e4;
     --bg_card: #b5ddff;
+    --bg_footer: #333333;
     --p_dark_color: #516372;
     --header_height: 3rem;
     --icon_size: 5rem;
@@ -395,7 +396,7 @@ img {
     flex-flow: column nowrap;
     align-items: center;
     gap: 1rem;
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 #start h2:last-of-type{
@@ -417,10 +418,28 @@ img {
     opacity: 0.9;
 }
 
+#start .white-button:hover{
+    opacity: 0.75;
+}
+
 /* /Main */
 
+/* Footer */
 
+footer{
+    background-color: var(--bg_footer);
+    color: white;
+    padding: 3rem 0;
+}
 
+footer a{
+    color: var(--bg_blue);
+    text-decoration: underline;
+}
+
+footer p:first-of-type{
+    padding-bottom: 5rem;
+}
 /* Responsive */
 
 @media screen and (min-width: 580px) {
