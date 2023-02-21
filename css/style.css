@@ -387,6 +387,36 @@ img {
 .text-violet{
     color: var(--bg_even_section);
 }
+
+/* Start */
+
+#start .wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+
+#start h2:last-of-type{
+    color: #fdc15f;
+}
+
+#start p{
+    padding-bottom: 1rem;
+}
+
+#start .white-button{
+    background-color: white;
+    color: var(--bg_even_section);
+    border-radius: 40px;
+    padding: 0.7rem 4rem;
+}
+
+.white-button:hover{
+    opacity: 0.9;
+}
+
 /* /Main */
 
 
@@ -488,15 +518,12 @@ img {
         color: black;
     }
 
-    .white-button{
+    nav .white-button{
         background-color: white;
         border-radius: 40px;
         padding: 0.2rem 0.5rem;
     }
 
-    .white-button:hover{
-        opacity: 0.9;
-    }
     /* /Header */
 
 
